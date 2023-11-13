@@ -260,6 +260,11 @@ namespace OneSTools.EventLog
                 "JobScheduler" => "Планировщик заданий",
                 "Debugger" => "Отладчик",
                 "RAS" => "Сервер администрирования",
+                "AnalyticsSystemClient" => "Клиент системы аналитики",
+                "AnalyticsSystemQuery" => "Служебный вызов системы аналитики",
+                "ODataConnection" => "Сессия OData-сервиса",
+                "MobileClient" => "Мобильный клиент",
+                "HTTPServiceConnection" => "Сессия http-сервиса",
                 _ => str
             };
         }
@@ -303,6 +308,7 @@ namespace OneSTools.EventLog
                     "Информационная база.Ошибка изменения расширения конфигурации",
                 "_$InfoBase$_.DBConfigUpdate" => "Информационная база.Изменение конфигурации базы данных",
                 "_$InfoBase$_.DBConfigUpdateStart" => "Информационная база.Запуск обновления конфигурации базы данных",
+                "_$InfoBase$_.DBConfigUpdateError" => "Информационная база.Ошибка обновления конфигурации базы данных",
                 "_$InfoBase$_.DumpError" => "Информационная база.Ошибка выгрузки в файл",
                 "_$InfoBase$_.DumpFinish" => "Информационная база.Окончание выгрузки в файл",
                 "_$InfoBase$_.DumpStart" => "Информационная база.Начало выгрузки в файл",
@@ -342,6 +348,8 @@ namespace OneSTools.EventLog
                 "_$Job$_.Start" => "Фоновое задание.Запуск",
                 "_$Job$_.Succeed" => "Фоновое задание.Успешное завершение",
                 "_$Job$_.Terminate" => "Фоновое задание.Принудительное завершение",
+                "_$Job$_.Finish" => "Фоновое задание. Успешное завершение",
+                "_$Job$_.Error" => "Фоновое задание. Ошибка выполнения",  
                 "_$OpenIDProvider$_.NegativeAssertion" => "Провайдер OpenID.Отклонено",
                 "_$OpenIDProvider$_.PositiveAssertion" => "Провайдер OpenID.Подтверждено",
                 "_$PerformError$_" => "Ошибка выполнения",
