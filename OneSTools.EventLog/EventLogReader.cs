@@ -114,14 +114,12 @@ namespace OneSTools.EventLog
 
         private bool SetNextLgpReader()
         {
-            var currentReaderLastWriteDateTime = DateTime.MinValue;
+            string currentFileName = "19000101000000";
 
             if (_lgpReader != null)
-                currentReaderLastWriteDateTime = new FileInfo(_lgpReader.LgpPath).LastWriteTime;
-            else if(_settings.SkipEventsBeforeDate != DateTime.MinValue)
-                currentReaderLastWriteDateTime = _settings.SkipEventsBeforeDate.AddSeconds(-1);
+                currentFileName = new FileInfo(_lgpReader.LgpPath).Name;
 
-            var filesDateTime = new List<(string, DateTime)>();
+            var filesDateTime = new List<(string, string)>();
 
             var files = Directory.GetFiles(_settings.LogFolder, "*.lgp");
 
@@ -129,16 +127,16 @@ namespace OneSTools.EventLog
                 if (_lgpReader != null)
                 {
                     if (_lgpReader.LgpPath != file)
-                        filesDateTime.Add((file, new FileInfo(file).LastWriteTime));
+                        filesDateTime.Add((file, new FileInfo(file).Name));
                 }
                 else
                 {
-                    filesDateTime.Add((file, new FileInfo(file).LastWriteTime));
+                    filesDateTime.Add((file, new FileInfo(file).Name));
                 }
 
-            var orderedFiles = filesDateTime.OrderBy(c => c.Item2).ToList();
+            filesDateTime.Sort((x, y) => string.Compare(y.Item2, x.Item2));
 
-            var (item1, _) = orderedFiles.FirstOrDefault(c => c.Item2 > currentReaderLastWriteDateTime);
+            var (item1, _) = filesDateTime.FirstOrDefault(c => string.Compare(c.Item2, currentFileName) > 0);
 
             if (string.IsNullOrEmpty(item1))
             {
