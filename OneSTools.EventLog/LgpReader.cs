@@ -265,6 +265,7 @@ namespace OneSTools.EventLog
                 "ODataConnection" => "Сессия OData-сервиса",
                 "MobileClient" => "Мобильный клиент",
                 "HTTPServiceConnection" => "Сессия http-сервиса",
+                "RecalcTotals" => "Сессия пересчет итогов",     
                 _ => str
             };
         }
@@ -294,6 +295,7 @@ namespace OneSTools.EventLog
                 "_$Data$_.Update" => "Данные.Изменение",
                 "_$Data$_.UpdatePredefinedData" => "Данные.Изменение предопределенных данных",
                 "_$Data$_.VersionCommentUpdate" => "Данные.Изменение комментария версии",
+                "_$Data$_.SetVersionComment" => "Данные.Добавление комментария версии",
                 "_$InfoBase$_.ConfigExtensionUpdate" => "Информационная база.Изменение расширения конфигурации",
                 "_$InfoBase$_.ConfigUpdate" => "Информационная база.Изменение конфигурации",
                 "_$InfoBase$_.DBConfigBackgroundUpdateCancel" => "Информационная база.Отмена фонового обновления",
@@ -328,6 +330,7 @@ namespace OneSTools.EventLog
                     "Информационная база.Изменение настроек сервиса интеграции",
                 "_$InfoBase$_.MasterNodeUpdate" => "Информационная база.Изменение главного узла",
                 "_$InfoBase$_.PredefinedDataUpdate" => "Информационная база.Обновление предопределенных данных",
+                "_$InfoBase$_.ParametersUpdate" => "Информационная база. Изменение параметров информационной базы",
                 "_$InfoBase$_.RegionalSettingsUpdate" => "Информационная база.Изменение региональных установок",
                 "_$InfoBase$_.RestoreError" => "Информационная база.Ошибка загрузки из файла",
                 "_$InfoBase$_.RestoreFinish" => "Информационная база.Окончание загрузки из файла",
@@ -342,7 +345,9 @@ namespace OneSTools.EventLog
                     "Информационная база.Установить обновление предопределенных данных",
                 "_$InfoBase$_.TARImportant" => "Тестирование и исправление.Ошибка",
                 "_$InfoBase$_.TARInfo" => "Тестирование и исправление.Сообщение",
-                "_$InfoBase$_.TARMess" => "Тестирование и исправление.Предупреждение",
+                "_$InfoBase$_.TARMess" => "Тестирование и исправление.Предупреждение", 
+                "_$InfoBase$_.UserPasswordPolicyNew" => "Информационная база. Добавление политики паролей пользователей",
+                "_$InfoBase$_.UserPasswordPolicyNewError" => "Информационная база. Ошибка изменения политики паролей пользователей",
                 "_$Job$_.Cancel" => "Фоновое задание.Отмена",
                 "_$Job$_.Fail" => "Фоновое задание.Ошибка выполнения",
                 "_$Job$_.Start" => "Фоновое задание.Запуск",
@@ -359,6 +364,8 @@ namespace OneSTools.EventLog
                 "_$Session$_.ConfigExtensionApplyError" => "Сеанс.Ошибка применения расширения конфигурации",
                 "_$Session$_.Finish" => "Сеанс.Завершение",
                 "_$Session$_.Start" => "Сеанс.Начало",
+                "_$Session$_.PasswordRecoveryAttempt" => "Сеанс. Попытка восстановления пароля",
+                "_$Session$_.PasswordRecoveryAttemptError" => "Сеанс. Ошибка попытки восстановления пароля",
                 "_$Transaction$_.Begin" => "Транзакция.Начало",
                 "_$Transaction$_.Commit" => "Транзакция.Фиксация",
                 "_$Transaction$_.Rollback" => "Транзакция.Отмена",
