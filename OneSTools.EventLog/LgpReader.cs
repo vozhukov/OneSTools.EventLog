@@ -1,4 +1,4 @@
-﻿using System;
+    ﻿using System;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -351,7 +351,8 @@ namespace OneSTools.EventLog
                 "_$InfoBase$_.UserPasswordPolicyNewError" => "Информационная база. Ошибка изменения политики паролей пользователей",
                 "_$InfoBase$_.VerifyAndRepairImportant" => "Тестирование и исправление.Ошибка",
                 "_$InfoBase$_.VerifyAndRepairInfo" => "Тестирование и исправление.Сообщение",
-                "_$InfoBase$_.VerifyAndRepairMessage" => "Тестирование и исправление.Предупреждение",     
+                "_$InfoBase$_.VerifyAndRepairMessage" => "Тестирование и исправление.Предупреждение",
+                "_$InfoBase$_.AdditionalAuthenticationSettingsUpdate" => "Информационная база.Изменение дополнительных настроек аутентификации",
                 "_$Job$_.Cancel" => "Фоновое задание.Отмена",
                 "_$Job$_.Fail" => "Фоновое задание.Ошибка выполнения",
                 "_$Job$_.Start" => "Фоновое задание.Запуск",
